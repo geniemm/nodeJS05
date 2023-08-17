@@ -1,0 +1,14 @@
+<script src="/static/js/image_read.js"></script>
+
+<form action="/file/upload" method="post"
+        enctype="multipart/form-data"> <!-- 지금 넘겨주는 방식이 파일이라는것을 알려줘야함-->
+    <input type="text" name="title"><br>
+
+    <img src ="#" id="preview" width="100" height="100" alt="이미지가 없습니다."><br>
+
+    <input type="file" name="file_name" onchange="readURL(this)"><br>
+    <!-- onchange : 해당하는값에 변화가 일어나면 호출?-->
+    <input type ="submit" value ="전송">
+</form>
+<hr>
+<a href = "/file/list">파일 목록 보기</a>
